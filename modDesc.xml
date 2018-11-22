@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no" ?>
+<modDesc descVersion="40">
+    <author>Giants</author>
+    <version>2.0.0.0</version>
+    <title>
+        <en>GREATPLAINS YP2425A</en>
+    </title>
+    <description>
+        <en>
+            <![CDATA[GREATPLAINS YP2425A]]>
+        </en>
+        <de>
+            <![CDATA[GREATPLAINS YP2425A]]>
+        </de>
+    </description>
+    <iconFilename>$data/vehicles/greatPlains/yp2425A/store_yp2425A.png</iconFilename>
+    <multiplayer supported="true" />
+
+    <storeItems>
+         <storeItem rootNode="vehicle" xmlFilename="yp2425A.xml"/>
+    </storeItems>
+</modDesc>
