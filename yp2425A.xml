@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
-<vehicle type="sowingMachine">
+<vehicle type="fertilizingSowingMachine">
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
@@ -10,6 +10,7 @@
         </specs>
         <functions>
             <function>$l10n_function_sowingMachine</function>
+            <function>$l10n_function_sowingMachineDirect</function>
         </functions>
         <image>$data/vehicles/greatPlains/yp2425A/store_yp2425A.png</image>
         <price>142000</price>
@@ -271,6 +272,10 @@
             <node node="SOIL_CHUNKS_emitterShapeMiddle" refNodeIndex="1" particleType="SOIL_CHUNKS" worldSpace="false"/>
         </particle>
     </workParticles>
+
+    <sprayer fillUnitIndex="2">
+        <usageScales workingWidth="18.2" scale="1"/>
+    </sprayer>
 
     <foldable>
         <foldingParts startMoveDirection="1" foldMiddleAnimTime="0.0833" turnOnFoldMaxLimit="0.0833" turnOnFoldMinLimit="0">
@@ -560,6 +565,7 @@
                         <fillRootNode node="yp2425a_main_component1"/>
                         <fillMassNode node="yp2425a_main_component1"/>
                     </fillUnit>
+                    <fillUnit unit="$l10n_unit_literShort" fillTypes="fertilizer" capacity="8400"/>
                 </fillUnits>
             </fillUnitConfiguration>
         </fillUnitConfigurations>
@@ -571,17 +577,22 @@
                 <volumes>
                     <volume node="fillVolume" fillUnitIndex="1" maxDelta="0.0"/>
                     <volume node="fillVolumeRight" fillUnitIndex="1" maxDelta="0.0"/>
+                    <volume node="fillVolumeFertilizer" maxDelta="0.0" fillUnitIndex="2"/>
                 </volumes>
             </fillVolumeConfiguration>
         </fillVolumeConfigurations>
         <unloadInfos>
             <unloadInfo>
-                <node node="unloadInfo" width="0.2" length="0.2"/>
+                <node node="unloadInfoseeds" width="0.2" length="0.2"/>
+            </unloadInfo>
+            <unloadInfo>
+                <node node="unloadInfoFertilizer" width="0.2" length="0.2"/>
             </unloadInfo>
         </unloadInfos>
         <loadInfos>
             <loadInfo>
-                <node node="loadInfo" width="0.3" length="0.3"/>
+                <node node="loadInfoSeeds" width="0.3" length="0.3"/>
+                <node node="loadInfoFertilizer" width="0.3" length="0.3"/>
             </loadInfo>
         </loadInfos>
     </fillVolume>
@@ -589,6 +600,7 @@
     <sowingMachine fillUnitIndex="1">
         <seedFruitTypeCategories>sowingMachine</seedFruitTypeCategories>
         <needsActivation value="true"/>
+        <useDirectPlanting value="true" />
         <sounds>
             <work template="DEFAULT_SOWING_WORK" linkNode="yp2425a_main_component1" />
             <airBlower template="DEFAULT_SOWING_AIR_BLOWER" linkNode="yp2425a_main_component1" />
