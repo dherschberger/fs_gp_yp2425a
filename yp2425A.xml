@@ -3,7 +3,7 @@
     <annotation>Copyright (C) GIANTS Software GmbH, All Rights Reserved.</annotation>
 
     <storeData>
-        <name>YP-2425A</name>
+        <name>YP-2425A (DSF)</name>
         <specs>
             <neededPower>280</neededPower>
             <workingWidth>18.2</workingWidth>
@@ -598,7 +598,7 @@
     </fillVolume>
 
     <sowingMachine fillUnitIndex="1">
-        <seedFruitTypeCategories>sowingMachine</seedFruitTypeCategories>
+        <seedFruitTypeCategories>sowingMachine planter</seedFruitTypeCategories>
         <needsActivation value="true"/>
         <useDirectPlanting value="true" />
         <sounds>
